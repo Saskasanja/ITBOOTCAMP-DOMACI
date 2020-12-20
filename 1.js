@@ -1,37 +1,34 @@
-// 1. Написати функцију која за параметар прима 
-// број сати (0-24) и у зависности од доба дана исписује поруке:
-//  Добро јутро , Добар дан или Добро вече.
+//Написати функцију која исписује све елементе низа који су дељиви са 5
+// function divisibleByFive(arr){
+//     ...
+// }
 
-{
-    function dobaDana(sati) {
-        if(sati>=4 && sati<12)
-        console.log('Dobro jutro')
-    }  if(sati>= 12 && sati <20)
-        console.log('Dobar dan')
-        else if (sati >=20 && sati< 24 )
-        console.log( 'Dobro vece')
+// divisibleByFive([1,2,3,4,5,10,15,23,1,5]) // Исписује -> 5,10,15,5
 
-    dobaDana (0)
-    dobaDana (3)
-    dobaDana (11)
-    dobaDana (12)
-    dobaDana (21)
-    dobaDana (24)
- 
-}
+// function lifeSupply(numPerMonth,age){
+//     ...
+// }
+function divisibleByFive(arr){
+    let array =[]
+    for (let el of arr) {
+        if (el % 5 ==0)
+        array.push(el)
 
-
-//Написати функцију која израчунава цену пице по квадратном центиметру
-// (параметри функције су полупречник у цм,  и цена пице)
-{   
-function cenaPoCmKv(r, cenaPize   
-    if ( r > 0 && cenaPize > 0){ 
-        
     }
-    return cenaPize / (r**2 *Math.PI)
+    console.log(array)
 }
 
-let proba =cenaPoCmKv (4, 1400)
-console.log(proba)
-let proba2 = cenaPoCmKv (32, 1900)
-console.log(proba2)
+divisibleByFive([1,2,3,4,5,10,15,23,1,5])
+
+
+// Написати функцију која враћа колико пице вам је довољно за доживотно снабдевање
+// Уноси се колико пице поједете на месечном нивоу, и колико година имате 
+// (Рачуна се да је довољно достављати до стоте године) 
+//lifeSupply(10,26) // Враћа 8880
+//console.log(lifeSupply(10,26)) // Исписује 8880
+
+function lifeSupply(numPerMonth,age){
+    return (100 - age) * 12 * numPerMonth
+}
+let test =lifeSupply( 10 , 26)
+console.log(test)
